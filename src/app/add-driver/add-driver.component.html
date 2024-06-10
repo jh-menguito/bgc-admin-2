@@ -1,0 +1,68 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="driver_name">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="driver_name"
+          required
+          [(ngModel)]="driver.driver_name"
+          name="driver_name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="plate_number">Description</label>
+        <input
+          class="form-control"
+          id="plate_number"
+          required
+          [(ngModel)]="driver.plate_number"
+          name="plate_number"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="bus_route">Description</label>
+        <input
+          class="form-control"
+          id="bus_route"
+          required
+          [(ngModel)]="driver.bus_route"
+          name="bus_route"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Description</label>
+        <input
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="driver.email"
+          name="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Description</label>
+        <input
+          class="form-control"
+          id="password"
+          required
+          [(ngModel)]="driver.password"
+          name="password"
+        />
+      </div>
+
+      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Tutorial was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newTutorial()">Add</button>
+    </div>
+  </div>
+</div>
